@@ -1,0 +1,100 @@
+//
+$dark: #2F2D2E;
+$primary: #048Ba8;
+$success: #99C24D;
+$danger: #F18F01;
+$warning: #F18F01;
+$info: #2E4057;
+
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$dropdown-bg: $dark;
+$dropdown-link-color: $light;
+$dropdown-divider-bg: $dark;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-color: #A0A8B2;
+    padding-top: $navbar-brand-height * 1.75;
+}
+
+.container {
+    background-color: $white;
+}
+
+.badge-success {
+    color: $white;
+}
+
+.error {
+    position: fixed;
+    top: $navbar-brand-height * 2;
+    right: 0;
+    padding: $alert-padding-x;
+    width: 350px;
+    max-width: 100vw;
+}
+
+// Colors
+.blue {
+    background-color: $blue;
+}
+
+.red {
+    background-color: $red;
+}
+
+.orange {
+    background-color: $orange;
+}
+
+.yellow {
+    background-color: $yellow;
+}
+
+.green {
+    background-color: $green;
+}
+
+// Customize slimselect style
+@import url(../../node_modules/slim-select/dist/slimselect.css);
+
+.ss-main .ss-multi-selected .ss-values .ss-disabled {
+    color: $input-placeholder-color;
+}
+
+.ss-main .ss-multi-selected {
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+}
+
+.ss-content .ss-list .ss-option:hover {
+    background-color: $primary;
+    color: $white;
+}
+
+.ss-content.ss-open {
+    border: $input-border-width solid $input-border-color;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.ss-content .ss-search input:focus {
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $input-focus-box-shadow;
+    }
+}
+
+.ss-main .ss-multi-selected .ss-values .ss-value {
+    background-color: $primary;
+    font-weight: $font-weight-bold;
+}

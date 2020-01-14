@@ -1,0 +1,30 @@
+@startuml TaskelloDatabase
+
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+
+class Tasks {
+    + id: Bigint
+    + title: Varchar
+    + content: Text
+    + open: boolean
+    + created_at: Date
+    + updated_at: Date
+}
+
+class Tags {
+    + id: Bigint
+    + title: Varchar
+    + color: Varchar
+}
+
+class TagsRelations {
+    + id: Bigint
+    + id_task: Bigint
+    + id_tag: Bigint
+}
+
+Tasks --> TagsRelations
+Tags --> TagsRelations
+
+@enduml
